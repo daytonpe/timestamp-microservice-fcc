@@ -74,7 +74,9 @@ router.get('/:text', function (req, res) {
         // });
     }
     else{
-        return res.status(500).send("There was a problem with the format of the request.");
+        output['unix'] = null;
+        output['natural'] = null;
+        res.json(output);
     }
 });
 
